@@ -1,9 +1,9 @@
 #!/bin/bash
-MYDOMAIN=MYDOMAIN.co.uk
+MYDOMAIN=mydomain.co.uk
 echo "**************************************************"
 echo "**         New NGINX Sub Domain Generator       **"
 echo "**************************************************"
-echo "Enter name of new subdomain e.g test.$MYDOMAIN.co.uk:"
+echo "Enter name of new subdomain e.g test.$MYDOMAIN:"
 read sub
 echo "Enter the internal IP Address of the host:"
 read ip
