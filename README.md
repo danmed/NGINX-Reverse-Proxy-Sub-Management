@@ -2,6 +2,8 @@
 
 2 simple scripts to add or delete a sub domain from an NGINX Reverse Proxy.
 
+NOTE : THIS ONLY DOES SIMPLE HTTP (port 80) 
+
 # CONFIG
 ```bash
 cd /etc/nginx/sites-available
