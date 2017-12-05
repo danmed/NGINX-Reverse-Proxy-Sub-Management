@@ -1,11 +1,10 @@
 #!/bin/bash
-MYDOMAIN=mydomain.co.uk
 echo "**************************************************"
 echo "**           Delete NGINX Sub Domain            **"
 echo "**************************************************"
-echo "Enter name of subdomain e.g test:"
+echo "Enter name of subdomain e.g test.domain.com:"
 read sub
-rm /etc/nginx/sites-available/$sub.$MYDOMAIN
-rm /etc/nginx/sites-enabled/$sub.$MYDOMAIN
+rm /etc/nginx/sites-available/$sub
+rm /etc/nginx/sites-enabled/$sub
 systemctl restart nginx
-echo $sub"."$MYDOMAIN" removed from config"
+echo $sub" removed from config"
