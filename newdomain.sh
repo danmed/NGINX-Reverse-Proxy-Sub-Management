@@ -8,6 +8,11 @@ echo "Enter the internal IP Address of the host:"
 read ip
 echo "Enter the port number"
 read port
+if [ -e /etc/nginx/sites-available/$sub ]
+then
+        echo $sub "already exists! Quiting."
+        exit
+else
 cp /etc/nginx/sites-available/new /etc/nginx/sites-available/$sub
 sed -i "s/new/$sub/" "/etc/nginx/sites-available/$sub"
 sed -i "s/<ipaddress>/$ip/" "/etc/nginx/sites-available/$sub"
@@ -15,3 +20,4 @@ sed -i "s/<port>/$port/" "/etc/nginx/sites-available/$sub"
 ln -s /etc/nginx/sites-available/$sub /etc/nginx/sites-enabled/$sub
 systemctl restart nginx
 echo $sub "created and enabled"
+fi
