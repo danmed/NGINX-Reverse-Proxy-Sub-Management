@@ -15,4 +15,4 @@ sed -i "s/<ipaddress>/$ip/" "/etc/nginx/sites-available/$sub.$MYDOMAIN"
 sed -i "s/<port>/$port/" "/etc/nginx/sites-available/$sub.$MYDOMAIN"
 ln -s /etc/nginx/sites-available/$sub.$MYDOMAIN /etc/nginx/sites-enabled/$sub.$MYDOMAIN
 systemctl restart nginx
-echo $sub".danmed.co.uk created and enabled"
+echo $sub"."$MYDOMAIN "created and enabled"
