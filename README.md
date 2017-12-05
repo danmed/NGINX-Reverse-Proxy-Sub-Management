@@ -4,11 +4,14 @@
 
 # CONFIG
 
-Replace MYDOMAIN with yours in both scripts.
+Replace MYDOMAIN=mydomain.co.uk with yours in both scripts.
+
 chmod 755 newdomain.sh
+
 chmod 755 deletedomain.sh
 
 # USAGE
 
 ./newdomain.sh
+
 ./deletedomain.sh
