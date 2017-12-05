@@ -3,7 +3,7 @@
 2 simple scripts to add or delete a sub domain from an NGINX Reverse Proxy.
 
 # CONFIG
-```
+```bash
 cd /etc/nginx/sites-available
 wget https://raw.githubusercontent.com/danmed/NGINX-Reverse-Proxy-Sub-Management/master/new
 cd
