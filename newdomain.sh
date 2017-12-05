@@ -2,7 +2,7 @@
 echo "**************************************************"
 echo "**         New NGINX Sub Domain Generator       **"
 echo "**************************************************"
-echo "Enter name of new subdomain e.g test.danmed.co.uk:"
+echo "Enter name of new subdomain e.g test.MYDOMAIN.co.uk:"
 read sub
 echo "Enter the internal IP Address of the host:"
 read ip
