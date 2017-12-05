@@ -10,7 +10,7 @@ read ip
 echo "Enter the port number"
 read port
 cp /etc/nginx/sites-available/new /etc/nginx/sites-available/$sub.$MYDOMAIN
-sed -i "s/new/$sub/" "/etc/nginx/sites-available/$sub.$MYDOMAIN"
+sed -i "s/new/$sub.$MYDOMAIN/" "/etc/nginx/sites-available/$sub.$MYDOMAIN"
 sed -i "s/<ipaddress>/$ip/" "/etc/nginx/sites-available/$sub.$MYDOMAIN"
 sed -i "s/<port>/$port/" "/etc/nginx/sites-available/$sub.$MYDOMAIN"
 ln -s /etc/nginx/sites-available/$sub.$MYDOMAIN /etc/nginx/sites-enabled/$sub.$MYDOMAIN
