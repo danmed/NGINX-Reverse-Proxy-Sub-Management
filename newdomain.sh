@@ -1,4 +1,7 @@
 #!/bin/bash
+echo "**************************************************"
+echo "**         New NGINX Sub Domain Generator       **"
+echo "**************************************************"
 echo "Enter name of new subdomain e.g test.danmed.co.uk:"
 read sub
 echo "Enter the internal IP Address of the host:"
@@ -11,3 +14,4 @@ sed -i "s/<ipaddress>/$ip/" "/etc/nginx/sites-available/$sub.danmed.co.uk"
 sed -i "s/<port>/$port/" "/etc/nginx/sites-available/$sub.danmed.co.uk"
 ln -s /etc/nginx/sites-available/$sub.danmed.co.uk /etc/nginx/sites-enabled/$sub.danmed.co.uk
 systemctl restart nginx
+echo $sub".danmed.co.uk created and enabled"
