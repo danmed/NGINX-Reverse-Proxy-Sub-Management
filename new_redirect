@@ -1,0 +1,5 @@
+server {
+        server_name NEW;
+        return 302 http://URL$request_uri;
+}
+
